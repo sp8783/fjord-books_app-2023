@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    models:
+      book: Book  #g
+
+    attributes:
+      book:
+        author: Author  #g
+        memo: Memo  #g
+        picture: Picture  #g
+        title: Title  #g
+
+  views:
+    common:
+      title_index: Books
+      title_new: New book
+      title_edit: Edit book
+      link_back_to_index: Back to books
+      link_to_new: Create new book
+      link_to_show: Show this book
+      link_to_edit: Edit this book
+      link_to_destroy: Destroy this book
+
+  controllers:
+    common:
+      notice_success_create: Book was successfully created.
+      notice_success_update: Book was successfully updated.
+      notice_success_destroy: Book was successfully destroyed.
