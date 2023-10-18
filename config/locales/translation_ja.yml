@@ -12,17 +12,17 @@ ja:
 
   views:
     common:
-      title_index: 本棚
-      title_new: 本を追加
-      title_edit: 本を編集
-      link_back_to_index: 本棚へ戻る
-      link_to_new: 本を追加する
+      title_index: "%{item}一覧"
+      title_new: "%{item}を追加"
+      title_edit: "%{item}を編集"
+      link_back_to_index: "%{item}一覧へ戻る"
+      link_to_new: "追加"
       link_to_show: 詳細情報
       link_to_edit: 編集
       link_to_destroy: 削除
 
   controllers:
     common:
-      notice_success_create: 本の登録が完了しました。
-      notice_success_update: 本の詳細情報を更新しました。
-      notice_success_destroy: 本の登録を削除しました。
+      notice_success_create: "%{item}の登録が完了しました。"
+      notice_success_update: "%{item}の詳細情報を更新しました。"
+      notice_success_destroy: "%{item}の登録を削除しました。"

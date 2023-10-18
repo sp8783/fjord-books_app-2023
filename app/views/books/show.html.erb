@@ -6,6 +6,6 @@
 
 <nav class="page-nav">
   <%= link_to t('views.common.link_to_edit'), edit_book_path(@book) %> |
-  <%= link_to t('views.common.link_back_to_index'), books_path %>
+  <%= link_to t('views.common.link_back_to_index', item: Book.model_name.human), books_path %>
   <%= button_to t('views.common.link_to_destroy'), @book, method: :delete %>
 </nav>

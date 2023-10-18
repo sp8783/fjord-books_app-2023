@@ -12,17 +12,17 @@ en:
 
   views:
     common:
-      title_index: Books
-      title_new: New book
-      title_edit: Edit book
-      link_back_to_index: Back to books
-      link_to_new: Create new book
-      link_to_show: Show this book
-      link_to_edit: Edit this book
-      link_to_destroy: Destroy this book
+      title_index: "%{item} List"
+      title_new: "New %{item}"
+      title_edit: "Edit %{item}"
+      link_back_to_index: "Back to %{item} List"
+      link_to_new: "Create"
+      link_to_show: "Show"
+      link_to_edit: "Edit"
+      link_to_destroy: "Destroy"
 
   controllers:
     common:
-      notice_success_create: Book was successfully created.
-      notice_success_update: Book was successfully updated.
-      notice_success_destroy: Book was successfully destroyed.
+      notice_success_create: "%{item} was successfully created."
+      notice_success_update: "%{item} was successfully updated."
+      notice_success_destroy: "%{item} was successfully destroyed."
