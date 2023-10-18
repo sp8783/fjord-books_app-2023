@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       book: 本
+      user: ユーザー  #g
 
     attributes:
       book:
@@ -9,3 +10,13 @@ ja:
         memo: メモ
         picture: 画像
         title: タイトル
+
+      user:
+        address: 住所  #g
+        bio: 自己紹介  #g
+        email: Eメール  #g
+        encrypted_password: 暗号化パスワード  #g
+        postal_code: 郵便番号  #g
+        remember_created_at: ログイン記憶時刻  #g
+        reset_password_sent_at: パスワードリセット送信時刻  #g
+        reset_password_token: パスワードリセット用トークン  #g

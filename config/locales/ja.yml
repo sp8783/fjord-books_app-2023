@@ -200,6 +200,11 @@ ja:
       previous: '‹ 前'
       next: '次 ›'
       truncate: '…'
+  layout:
+    common:
+      edit_profile: プロフィール編集
+      logout: ログアウト
+      sign_in_as: "ログイン中のユーザー：%{email}"
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
