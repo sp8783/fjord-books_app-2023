@@ -16,6 +16,15 @@
         Logged in as <strong><%= current_user.email %></strong>.
         <%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' %> |
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+        <div class="title">メニュー</div>
+        <ul>
+          <li>
+            <%= link_to '本', books_path %>
+          </li>
+          <li>
+            <%= link_to 'ユーザー', users_path %>
+          </li>
+        </ul>
       <% else %>
         <%= link_to "Sign up", new_user_registration_path, class: 'navbar-link'  %> |
         <%= link_to "Login", new_user_session_path, class: 'navbar-link'  %>
