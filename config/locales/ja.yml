@@ -216,3 +216,4 @@ ja:
     registrations:
       edit:
         title: "アカウント編集"
+        current_avatar: "現在のユーザーアイコン"

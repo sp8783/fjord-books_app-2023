@@ -21,4 +21,9 @@
 <div>
   <%= f.label :avatar %>
   <%= f.file_field :avatar %>
+
+  <% if @user.avatar.attached? %>
+    <p><%= t('devise.registrations.edit.current_avatar') %></p>
+    <p><%= image_tag @user.avatar.variant(:thumb) %></p>
+  <% end %>
 </div>
