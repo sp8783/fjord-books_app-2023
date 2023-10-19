@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    models:
+      book: Book  #g
+
+    attributes:
+      book:
+        author: Author  #g
+        memo: Memo  #g
+        picture: Picture  #g
+        title: Title  #g
+
+  views:
+    common:
+      title_index: "%{item} List"
+      title_new: "New %{item}"
+      title_edit: "Edit %{item}"
+      link_back_to_index: "Back to %{item} List"
+      link_to_new: "Create"
+      link_to_show: "Show"
+      link_to_edit: "Edit"
+      link_to_destroy: "Destroy"
+
+  controllers:
+    common:
+      notice_success_create: "%{item} was successfully created."
+      notice_success_update: "%{item} was successfully updated."
+      notice_success_destroy: "%{item} was successfully destroyed."
