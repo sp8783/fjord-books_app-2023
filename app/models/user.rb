@@ -14,9 +14,10 @@ class User < ApplicationRecord
 
   def avatar_type
     return unless avatar.attached?
-    unless avatar.image?
-      avatar.purge
-      errors.add(:avatar, I18n.t('errors.messages.avatar_invalid'))
-    end
+
+    return if avatar.image?
+
+    avatar.purge
+    errors.add(:avatar, I18n.t('errors.messages.avatar_invalid'))
   end
 end
