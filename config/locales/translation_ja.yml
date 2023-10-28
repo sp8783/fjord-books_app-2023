@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       book: 本
-      user: ユーザー  #g
+      user: ユーザー
 
     attributes:
       book:
@@ -12,11 +12,11 @@ ja:
         title: タイトル
 
       user:
-        address: 住所  #g
-        bio: 自己紹介  #g
-        email: Eメール  #g
-        encrypted_password: 暗号化パスワード  #g
-        postal_code: 郵便番号  #g
-        remember_created_at: ログイン記憶時刻  #g
-        reset_password_sent_at: パスワードリセット送信時刻  #g
-        reset_password_token: パスワードリセット用トークン  #g
+        address: 住所
+        bio: 自己紹介
+        email: Eメール
+        encrypted_password: 暗号化パスワード
+        postal_code: 郵便番号
+        remember_created_at: ログイン記憶時刻
+        reset_password_sent_at: パスワードリセット送信時刻
+        reset_password_token: パスワードリセット用トークン
