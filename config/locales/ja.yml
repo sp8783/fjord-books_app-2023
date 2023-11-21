@@ -202,6 +202,7 @@ ja:
       truncate: '…'
   layout:
     common:
+      menu: メニュー
       edit_profile: プロフィール編集
       logout: ログアウト
       sign_in_as: "ログイン中のユーザー：%{email}"
