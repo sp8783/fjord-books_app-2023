@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
 
   # GET /reports or /reports.json
   def index
-    @reports = Report.order(:id).page(params[:page])
+    @reports = Report.includes(:user).order(:id).page(params[:page])
   end
 
   # GET /reports/1 or /reports/1.json
@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
 
   # POST /reports or /reports.json
   def create
-    @report = Report.new(report_params)
+    @report = current_user.reports.new(report_params)
 
     respond_to do |format|
       if @report.save
