@@ -199,6 +199,8 @@ ja:
     comments:
       form:
         create: コメントする
+      message:
+        nothing: コメントはありません
     pagination:
       first: '« 最初'
       last: '最後 »'

@@ -1,7 +1,6 @@
 <h2><%= t('views.common.title_index', name: Comment.model_name.human) %></h2>
-  <% comments = commentable.comments %>
-  <% comments.each do |comment| %>
-    <% if comment.persisted? %>
+  <% if comments.any? %>
+    <% comments.each do |comment| %>
       <p>
         <strong><%= comment.user.name.present? ? comment.user.name : comment.user.email %></strong>
         <%= comment.content %>
@@ -11,6 +10,8 @@
         <% end %>
       </p>
     <% end %>
+  <% else %>
+    <p><%= t('views.comments.message.nothing') %></p>
   <% end %>
 
 <%= form_with(model: [ commentable, commentable.comments.new ]) do |form| %>
