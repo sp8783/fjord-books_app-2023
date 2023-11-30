@@ -6,7 +6,9 @@
         <strong><%= comment.user.name %></strong>
         <%= comment.content %>
         <%= l comment.created_at, format: :short %>
-        <%= link_to t('views.common.destroy', name: Comment.model_name.human.downcase), [commentable, comment], data: { turbo_method: :delete } %>
+        <% if current_user.id == comment.user_id %>
+          <%= link_to t('views.common.destroy', name: Comment.model_name.human.downcase), [commentable, comment], data: { turbo_method: :delete } %>
+        <% end %>
       </p>
     <% end %>
   <% end %>
