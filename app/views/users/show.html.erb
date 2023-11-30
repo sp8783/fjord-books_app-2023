@@ -1,0 +1,9 @@
+<div class="show-item">
+  <%= render @user %>
+</div>
+<nav class="page-nav">
+  <%= link_to t('views.common.back', name: i18n_pluralize(User.model_name.human.downcase)), users_path %>
+  <% if current_user == @user %>
+    <%= link_to t('devise.registrations.edit.title', resource: User.human_attribute_name(:profile)), edit_user_registration_path %>
+  <% end %>
+</nav>
