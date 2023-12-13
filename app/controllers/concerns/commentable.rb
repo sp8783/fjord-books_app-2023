@@ -15,7 +15,7 @@ module Commentable
 
   def destroy
     current_user.comments.find(params[:id]).destroy!
-    redirect_to polymorphic_url([@commentable, @comment]), notice: t('controllers.common.notice_destroy', name: Comment.model_name.human)
+    redirect_to polymorphic_url([@commentable]), notice: t('controllers.common.notice_destroy', name: Comment.model_name.human)
   end
 
   private
