@@ -2,7 +2,7 @@
   <% if comments.any? %>
     <% comments.each do |comment| %>
       <p>
-        <strong><%= comment.user.name.present? ? comment.user.name : comment.user.email %></strong>
+        <strong><%= comment.user.name_or_email %></strong>
         <%= comment.content %>
         <%= l comment.created_at, format: :short %>
         <% if current_user.id == comment.user_id %>
