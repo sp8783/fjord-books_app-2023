@@ -1,0 +1,20 @@
+<h2><%= t('views.common.title_index', name: Comment.model_name.human) %></h2>
+  <% if comments.any? %>
+    <% comments.each do |comment| %>
+      <p>
+        <strong><%= comment.user.name_or_email %></strong>
+        <%= comment.content %>
+        <%= l comment.created_at, format: :short %>
+        <% if current_user.id == comment.user_id %>
+          <%= link_to t('views.common.destroy', name: Comment.model_name.human.downcase), [commentable, comment], data: { turbo_method: :delete } %>
+        <% end %>
+      </p>
+    <% end %>
+  <% else %>
+    <p><%= t('views.comments.message.nothing') %></p>
+  <% end %>
+
+<%= form_with(model: [ commentable, commentable.comments.new ]) do |form| %>
+  <%= form.text_field :content, required: true %>
+  <%= form.submit t('views.comments.form.create') %>
+<% end %>
