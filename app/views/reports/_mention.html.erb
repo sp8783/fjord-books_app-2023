@@ -1,0 +1,12 @@
+<% if report.mentioned_references.present? %>
+  <div>
+    <strong><%= t('views.reports.mention_from') %></strong>
+    <ul>
+      <% report.mentioned_reports.each do |report| %>
+        <nav class="page-nav">
+          <li><%= link_to report.title, report_path(report) %></li>
+        </nav>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
