@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-report_1:
+one:
   id: 1
   user: alice
   title: Hello World
   content: This is the first report
   created_at: <%= Time.now %>
 
-report_2_mentioning_report_1:
+two_mentioning_one:
   id: 2
   user: bob
   title: alice's report is GOOD!!
