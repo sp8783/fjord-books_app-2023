@@ -3,13 +3,9 @@
 require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
-  test 'Report#editable? should return true if the user is the owner of the report' do
+  test 'Report#editable?' do
     report_of_alice = reports(:one)
     assert report_of_alice.editable?(users(:alice))
-  end
-
-  test 'Report#editable? should return false if the user is not the owner of the report' do
-    report_of_alice = reports(:one)
     assert_not report_of_alice.editable?(users(:bob))
   end
 
