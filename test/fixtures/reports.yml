@@ -6,10 +6,3 @@ one:
   title: Hello World
   content: This is the first report
   created_at: <%= Time.now %>
-
-two_mentioning_one:
-  id: 2
-  user: bob
-  title: alice's report is GOOD!!
-  content: http://localhost:3000/reports/1
-  created_at: <%= Time.now %>
