@@ -14,6 +14,8 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test 'Report#save_mentions' do
+    assert_equal 0, reports(:one).mentioned_reports.count
+
     new_mentioning_report = users(:bob).reports.new(title: 'This is a GOOD report!!', content: 'http://localhost:3000/reports/1')
     new_mentioning_report.save
     assert_includes reports(:one).mentioned_reports, new_mentioning_report
