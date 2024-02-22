@@ -9,7 +9,7 @@ class ReportTest < ActiveSupport::TestCase
     assert_not report_of_alice.editable?(users(:bob))
   end
 
-  test 'Report#created_on should return the Date object when the report was created' do
+  test 'Report#created_on' do
     assert_instance_of Date, reports(:one).created_on
   end
 
