@@ -34,6 +34,9 @@ class ReportsTest < ApplicationSystemTestCase
 
   test 'should update Report' do
     visit report_url(@report)
+    assert_text 'タイトル: Hello World'
+    assert_text '内容: This is the first report'
+
     click_on 'この日報を編集'
 
     fill_in 'タイトル', with: 'Modified Title'
