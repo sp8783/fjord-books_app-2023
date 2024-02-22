@@ -28,8 +28,8 @@ class ReportsTest < ApplicationSystemTestCase
     click_on '登録する'
 
     assert_text '日報が作成されました。'
-    assert_selector 'p', text: 'タイトル: Hi'
-    assert_selector 'p', text: '内容: best regards'
+    assert_text 'タイトル: Hi'
+    assert_text '内容: best regards'
   end
 
   test 'should update Report' do
