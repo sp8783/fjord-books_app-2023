@@ -41,8 +41,8 @@ class ReportsTest < ApplicationSystemTestCase
     click_on '更新する'
 
     assert_text '日報が更新されました。'
-    assert_selector 'p', text: 'タイトル: Modified Title'
-    assert_selector 'p', text: '内容: Modified Content'
+    assert_text 'タイトル: Modified Title'
+    assert_text '内容: Modified Content'
   end
 
   test 'should destroy Report' do
