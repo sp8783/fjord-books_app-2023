@@ -3,17 +3,17 @@
 require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
-  test 'Report#editable?' do
+  test 'editable?' do
     report_of_alice = reports(:one)
     assert report_of_alice.editable?(users(:alice))
     assert_not report_of_alice.editable?(users(:bob))
   end
 
-  test 'Report#created_on' do
+  test 'created_on' do
     assert_instance_of Date, reports(:one).created_on
   end
 
-  test 'Report#save_mentions' do
+  test 'save_mentions' do
     assert_equal 0, reports(:one).mentioned_reports.count
 
     new_mentioning_report = users(:bob).reports.new(title: 'This is a GOOD report!!', content: 'http://localhost:3000/reports/1')
